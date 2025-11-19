@@ -1,0 +1,116 @@
+:root {
+        --bg-dark: #0f172a;
+        --card-dark: rgba(30, 41, 59, 0.7);
+        --text-dark: #fff;
+        --bg-light: #e2e8f0;
+        --card-light: #fff;
+        --text-light: #000;
+        --neon: #0ff;
+    }
+
+    body {
+        background: var(--bg-dark);
+        font-family: "Poppins", sans-serif;
+        color: var(--text-dark);
+        text-align: center;
+        padding: 0 30px;
+        transition: 2s;
+    }
+
+    h1 {
+        text-shadow: 0 0 20px var(--neon);
+        font-size: 18px;
+        animation: fadeIn 1s;
+    }
+
+    .box {
+        margin: auto;
+        margin-top: 40px;
+        padding: 25px;
+        width: 90%;
+        max-width: 450px;
+        background: var(--card-dark);
+        border-radius: 15px;
+        box-shadow: 0 0 20px var(--neon);
+        backdrop-filter: blur(6px);
+        transition: 0.4s;
+        animation: fadeIn 1s;
+    }
+
+    #soal, #jawaban, #status, #skor {
+        margin-top: 15px;
+        font-size: 20px;
+        min-height: 40px;
+        animation: fadeIn 0.8s;
+    }
+
+    .neon {
+        color: var(--neon);
+        text-shadow: 0 0 12px var(--neon);
+    }
+    button {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        padding: 10px 22px;
+        border: none;
+        background: var(--neon);
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 8px;
+        font-size: 16px;
+        box-shadow: 0 0 15px var(--neon);
+        transition: 0.2s;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px var(--neon);
+    }
+
+    .input-box {
+        margin-top: 15px;
+    }
+
+    input {
+        padding: 10px;
+        width: 80%;
+        border-radius: 6px;
+        border: none;
+        font-size: 16px;
+        text-align: center;
+        outline: none;
+        margin-top: 8px;
+    }
+    
+    /* Fade-in animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    #jam {
+      font-size: 40px;
+      font-weight: bold;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+      margin-top: 20px;
+    }
+    /* === MARQUEE === */
+    .marquee {
+      background-color: #0f172a;
+      padding: 10px;
+      color: #00ffff;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee span {
+      display: inline-block;
+      animation: scrollText 12s linear infinite;
+    }
+
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
